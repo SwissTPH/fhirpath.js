@@ -10,11 +10,11 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send(
-    "<h1>FHIRpath Value Expression API</h1> \n <em>To validate FHIRpath expressions, send a .json file per POST request to the <b>/validateExpression</b> endpoint </em>"
+    "<h1>FHIRpath Value Expression API</h1> \n <em>To validate FHIRpath expressions, send a .json file per POST request to the <b>/validate</b> endpoint </em>"
   );
 });
 
-app.post("/validateExpressions", (req, res) => {
+app.post("/validate", (req, res) => {
   var data = req.body;
 
   context = {};
