@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("<h1>FHIR Value Expression Verification API</h1>");
+  res.send(
+    "<h1>FHIRpath Value Expression API</h1> \n <em>To validate FHIRpath expressions, send a .json file per POST request to the <b>/validateExpression</b> endpoint </em>"
+  );
 });
 
 app.post("/validateExpressions", (req, res) => {
