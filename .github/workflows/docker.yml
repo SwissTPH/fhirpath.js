@@ -16,5 +16,5 @@ jobs:
       - name: Build the fhirpath validation Docker image
         run: |
           LABEL=api
-          docker build api --tag ghcr.io/fhirpath/fhirpath-val:${LABEL}
-          docker push ghcr.io/fhirpath/fhirpath-val:${LABEL}
+          docker build api --tag ghcr.io/swisstph/fhirpath-val:${LABEL}
+          docker push ghcr.io/swisstph/fhirpath-val:${LABEL}
