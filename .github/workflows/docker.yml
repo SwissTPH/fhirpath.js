@@ -15,6 +15,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build the fhirpath validation Docker image
         run: |
-          LABEL=api
-          docker build api --tag ghcr.io/swisstph/fhirpath-val:${LABEL}
-          docker push ghcr.io/swisstph/fhirpath-val:${LABEL}
+          LABEL=latest
+          docker build api --tag ghcr.io/swisstph/questionnaire_fhirpath_validator:${LABEL}
+          docker push ghcr.io/swisstph/questionnaire_fhirpath_validator:${LABEL}
